@@ -17,9 +17,9 @@ public class DestoryBycontant : MonoBehaviour {
 			Instantiate(playerExplosion,other.transform.position, other.transform.rotation);
 		}
 
-
-		Destroy (other.gameObject);
 		Destroy (gameObject);
+		Destroy (other.gameObject);
+	
 	}
 		
 
