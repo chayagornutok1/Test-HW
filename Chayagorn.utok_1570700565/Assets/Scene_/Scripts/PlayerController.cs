@@ -5,6 +5,20 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float speed;
+	public GameObject Shot;
+	public Transform ShotSpawn;
+	public float fireRate;
+	public float nextFire;
+
+	void Update()
+	{
+		if (Input.GetButton ("Fire1") && Time.time > nextFire) 
+		{
+			nextFire = Time.time + fireRate;
+			//GameObject clone = 
+			Instantiate(Shot,ShotSpawn.position, ShotSpawn.rotation);
+		}
+	}
 
 	void FixedUpdate()
 	{
